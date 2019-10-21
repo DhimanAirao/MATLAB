@@ -1,14 +1,14 @@
 clear all;
 clc;
-format long;
 syms x;
-f=input('enter the function of x ');
-startvalue=input('enter the initial value ');
-intervals=input('enter the number of intervals ');
-interval_size=input('enter the interval size ');
+f(x)=input('Enter the slope function- '); %enter function like for eg. x^2+1
+startpoint=input('Enter the starting point- ');
+endpoint=input('Enter the ending point- ');
+interval=input('Enter number of intervals- ');
+intercept=input('Enter intercept- ');
+interval_size=(endpoint-startpoint)/interval;
 
-for i=1:intervals
-    newvalue=startvalue+(f(startvalue)*interval_size);
-    startvalue=newvalue;
+for i=1:interval
+    intercept = intercept + f(intercept)*interval_size;  
+    disp(intercept);
 end
-disp(newvalue);

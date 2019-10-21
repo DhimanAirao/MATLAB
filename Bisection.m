@@ -1,11 +1,12 @@
 clear all;
 clc;
+syms x;
+f(x)=input('Enter function: ');
 
-f=input('enter the function : ')  %format to enter function :- @(x) function
-a=1.5635;
-b=4.3658;
+a=input('Enter A: ');
+b=input('Enter B: ');
 
-for i=0:100
+for i=1:100
     c=(a+b)/2;
     if f(a)*f(c)<0
         b=c;
@@ -13,3 +14,7 @@ for i=0:100
         a=c;
     end
 end
+
+disp(c);
+
+
